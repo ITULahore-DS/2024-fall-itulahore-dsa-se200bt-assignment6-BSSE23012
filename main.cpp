@@ -7,6 +7,7 @@ int main(){
 
   int option;
 
+
   while(true)
   {
     cout << "[1] EMPTY STACK CHECK\n";
@@ -25,7 +26,7 @@ int main(){
       Stack myStack;
       myStack.printStack();
 
-    } 
+    }
     else if (option == 2) {
       Stack myStack;
 
@@ -35,7 +36,7 @@ int main(){
 
       myStack.printStack();
 
-    } 
+    }
     else if (option == 3) {
       Stack myStack;
 
@@ -52,7 +53,7 @@ int main(){
       myStack.pop();
       myStack.printStack();  // Stack should be empty
 
-    } 
+    }
     else if (option == 4) {
       Stack myStack;
 
@@ -64,7 +65,7 @@ int main(){
 
       myStack.printStack();
 
-    } 
+    }
     else if (option == 5) {
       Stack myStack;
 
@@ -78,7 +79,7 @@ int main(){
 
       myStack.printStack();
 
-    } 
+    }
     else if (option == 6) {
       Stack myStack;
 
@@ -91,20 +92,20 @@ int main(){
       myStack.clear();
       myStack.printStack();
 
-    } 
+    }
     else if (option == 7) {
       Stack myStack;
-      
-      myStack.pop();  
+
+      myStack.pop();
       myStack.printStack();
 
-    } 
+    }
     else if (option == 8) {
       Stack myStack;
-      
+
       cout << "PEEK EMPTY TOP : " << myStack.peek() << endl;
 
-    } 
+    }
     else if (option == 9)
       break;
   }

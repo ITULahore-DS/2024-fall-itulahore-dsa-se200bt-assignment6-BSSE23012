@@ -164,11 +164,24 @@ void Queue ::enqueue(int data) {
   }
   else
   {
+//    Node * newNode = new Node;
+//    newNode->setData(data);
+//    newNode->setNext(top);
+//    top = newNode;
+//    newNode = nullptr;
+
     Node * newNode = new Node;
     newNode->setData(data);
-    newNode->setNext(top);
-    top = newNode;
+
+    Node * iterator = top;
+    while( iterator->getNext() != nullptr )
+    {
+      iterator = iterator->getNext();
+    }
+    iterator->setNext(newNode);
     newNode = nullptr;
+    iterator = nullptr;
+
   }
   count +=1;
 }
@@ -186,13 +199,18 @@ void Queue ::dequeue() {
     }
     else
     {
-      Node * iterator = top;
-      while( iterator->getNext()->getNext() != nullptr )
-      {
-        iterator = iterator->getNext();
-      }
-      delete iterator->getNext();
-      iterator->setNext(nullptr);
+//      Node * iterator = top;
+//      while( iterator->getNext()->getNext() != nullptr )
+//      {
+//        iterator = iterator->getNext();
+//      }
+//      delete iterator->getNext();
+//      iterator->setNext(nullptr);
+
+      Node * temp = top;
+      top = top->getNext();
+      delete temp; temp = nullptr;
+
     }
     count -= 1;
   }
